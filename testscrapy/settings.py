@@ -98,3 +98,10 @@ IMAGES_STORE = "./images"
 
 SELENIUM_TIMEOUT = 20
 PHANTOMJS_SERVICE_ARGS = ['--load-images=false', '--disk-cache=true']
+
+# 核心配置
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+
+# 配置Redis服务器的地址
+REDIS_URL = "redis://[:password]@host:port"
