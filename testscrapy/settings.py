@@ -53,7 +53,7 @@ ROBOTSTXT_OBEY = False
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-    "testscrapy.middlewares.SeleniumMiddleware":543
+    # "testscrapy.middlewares.SeleniumMiddleware":543
    # 'testscrapy.middlewares.RandomUserAgentMiddleware': 543,
 }
 
@@ -67,7 +67,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    # 'testscrapy.pipelines.TestscrapyPipeline': 300,
-   #  'testscrapy.pipelines.ImagePipeline':300,
+    'testscrapy.pipelines.ImagePipeline':300,
     'testscrapy.pipelines.MongoPipeline':301
 }
 

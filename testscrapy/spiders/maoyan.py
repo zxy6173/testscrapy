@@ -6,11 +6,11 @@ from testscrapy.items import MaoyanItem
 class MaoyanSpider(scrapy.Spider):
     name = 'maoyan'
     allowed_domains = ['maoyan.com']
-    # start_urls = ['https://maoyan.com/films?showType=1&offset=0']
-    base_url = 'https://maoyan.com/'
+    start_urls = ['https://maoyan.com/films?showType=1&offset=0']
+    # base_url = 'https://maoyan.com/'
 
-    def start_requests(self):
-        yield Request(url=self.base_url,callback=self.parse,dont_filter=True)
+    # def start_requests(self):
+    #     yield Request(url=self.base_url,callback=self.parse,dont_filter=True)
 
     def parse(self, response):
 
@@ -26,4 +26,4 @@ class MaoyanSpider(scrapy.Spider):
         url = response.urljoin(next)
         yield scrapy.Request(url=url,callback=self.parse)
 
-        response.xpath("//div/img")
+        # response.xpath("//div/img")
